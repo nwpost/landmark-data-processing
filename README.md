@@ -2,15 +2,7 @@
 
 R scripts for processing geometric morphometric landmark datasets and evaluating density-based missing-landmark estimation.
 
-This repository is associated with the manuscript:
-
-> **Traditional characters and Procrustes-aligned landmark data: a sensitivity analysis in morphological data type weighting for phylogenetic analyses**
-
-A formal citation will be added after publication.
-
-## Citation
-
-If you use this repository, please cite the associated manuscript:
+If you use this repository, please cite the associated publication:
 
 [will be added after publication]
 
