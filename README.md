@@ -4,7 +4,8 @@ R scripts for processing geometric morphometric landmark datasets and evaluating
 
 If you use this repository, please cite the associated publication:
 
-[will be added after publication]
+[Full citation will be added after publication]
+DOI: 10.1111/cla.70053
 
 ## Overview
 
