@@ -17,7 +17,7 @@
 #   configurations to `output_dir`.
 #
 # Notes:
-#   - This script intentionally outputs complete estimated configurations.
+#   - This script outputs complete estimated configurations.
 #   - It does NOT restore any original missing landmark values.
 #   - Density weights are proportional to local neighborhood radius:
 #       smaller radius = denser morphospace region = lower weight
@@ -331,7 +331,7 @@ print(summary(as.vector(shared_mat)))
 # -----------------------------------------------------------------------------
 
 # SMACOF is used to smooth corrected partial distances. Missing pairwise
-# distances are assigned zero weight explicitly, rather than passed as NA.
+# distances are assigned zero weight explicitly, not NA.
 
 set.seed(random_seed)
 
@@ -421,7 +421,7 @@ local_radius <- rowMeans(nn$nn.dist)
 
 # IMPORTANT:
 #   local_radius is smaller in dense regions and larger in isolated regions.
-#   Therefore weights should be proportional to local_radius, not 1/local_radius,
+#   Therefore weights should be proportional to local_radius
 #   if the goal is to downweight dense regions and upweight isolated morphologies.
 w_density <- local_radius
 invalid <- !is.finite(w_density) | w_density <= 0
@@ -548,7 +548,7 @@ pca_unw <- geomorph::gm.prcomp(gpa_unw$coords)
 pca_w   <- geomorph::gm.prcomp(gpa_w$coords)
 
 # -----------------------------------------------------------------------------
-# 12. Plots from exploratory script
+# 12. Plots
 # -----------------------------------------------------------------------------
 
 pdf(file.path(output_dir, "figures", "pca_weighted_unweighted_side_by_side.pdf"), width = 9, height = 4.5)
@@ -694,7 +694,7 @@ geomorph::writeland.tps(
 )
 
 # -----------------------------------------------------------------------------
-# 13. Diagnostics from exploratory script
+# 13. Diagnostics
 # -----------------------------------------------------------------------------
 
 cat("
